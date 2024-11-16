@@ -15,12 +15,23 @@ small:0.5
 paragraph default:1.6
 
 --- 02 COLOURS 
-
 - Primary: #e67e22;
-- Tints: #fae5d3, #fdf2e9
-- Shades: #cf711f
+
+- Tints:
+#fae5d3 
+#fdf2e9
+#eb984e
+
+- Shades: 
+#cf711f
+#45260a
+
 - Accents:
 - Greys
+
+#888
+#767676
+#6f6f6f
 #555
 #333
 
@@ -45,7 +56,11 @@ Medium : 11px
 }
 
 html {
+  /* font-size = 10px */
+  /* 10px / 16px = 0.625 = 62.5%  */
   font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -53,6 +68,8 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555;
+
+  overflow-x: hidden;
 }
 
 /* ************************************************************* */
@@ -85,6 +102,9 @@ body {
   align-items: center;
 }
 
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
 }
@@ -212,6 +232,7 @@ body {
 
 .list-item {
   font-size: 1.8rem;
+  line-height: 1.2;
   display: flex;
   align-items: center;
   gap: 1.6rem;
